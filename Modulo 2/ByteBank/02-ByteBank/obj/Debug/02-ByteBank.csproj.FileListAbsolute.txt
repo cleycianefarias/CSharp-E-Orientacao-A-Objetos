@@ -1,0 +1,6 @@
+C:\Users\faria\Documents\Cursos\ByteBank\02-ByteBank\bin\Debug\02-ByteBank.exe.config
+C:\Users\faria\Documents\Cursos\ByteBank\02-ByteBank\bin\Debug\02-ByteBank.exe
+C:\Users\faria\Documents\Cursos\ByteBank\02-ByteBank\bin\Debug\02-ByteBank.pdb
+C:\Users\faria\Documents\Cursos\ByteBank\02-ByteBank\obj\Debug\02-ByteBank.csproj.CoreCompileInputs.cache
+C:\Users\faria\Documents\Cursos\ByteBank\02-ByteBank\obj\Debug\02-ByteBank.exe
+C:\Users\faria\Documents\Cursos\ByteBank\02-ByteBank\obj\Debug\02-ByteBank.pdb
