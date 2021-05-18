@@ -1,0 +1,7 @@
+C:\Users\faria\Documents\Alura Cursos\Modulo 3\ByteBank\Sobrecargas\obj\Debug\Sobrecargas.csprojAssemblyReference.cache
+C:\Users\faria\Documents\Alura Cursos\Modulo 3\ByteBank\Sobrecargas\obj\Debug\Sobrecargas.csproj.CoreCompileInputs.cache
+C:\Users\faria\Documents\Alura Cursos\Modulo 3\ByteBank\Sobrecargas\bin\Debug\Sobrecargas.exe.config
+C:\Users\faria\Documents\Alura Cursos\Modulo 3\ByteBank\Sobrecargas\bin\Debug\Sobrecargas.exe
+C:\Users\faria\Documents\Alura Cursos\Modulo 3\ByteBank\Sobrecargas\bin\Debug\Sobrecargas.pdb
+C:\Users\faria\Documents\Alura Cursos\Modulo 3\ByteBank\Sobrecargas\obj\Debug\Sobrecargas.exe
+C:\Users\faria\Documents\Alura Cursos\Modulo 3\ByteBank\Sobrecargas\obj\Debug\Sobrecargas.pdb
