@@ -20,8 +20,55 @@ namespace ByteBank.SistemaAgencia
             string textoQualquer = "smkmkdfbnkjsbfhfs";
 
 
-            string palavra = "moedaOrigem=real&moedaDestino=dolar";
-            string nomeArgumento = "moedaDestino";
+
+
+            string urlParametros = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
+            ExtratorValorDeArgumentosURL extratorDeValores = new ExtratorValorDeArgumentosURL(urlParametros);
+
+            string valorMoedaDestino = extratorDeValores.GetValor("moedaDestino");
+            Console.WriteLine("Valor de moedaDestino: " + valorMoedaDestino);
+
+
+            string valorMoedaOrigem = extratorDeValores.GetValor("moedaOrigem");
+            Console.WriteLine("Valor de moedaOrigem: " + valorMoedaOrigem);
+
+
+            Console.WriteLine(extratorDeValores.GetValor("VALOR"));
+            Console.ReadLine();
+
+            //testando ToLower and ToUper
+            string mensagemOrigem = "PALAVRA";
+            string termoBusca = "ra";
+
+
+            Console.WriteLine("Caixa Alta: "+termoBusca.ToUpper());
+            Console.WriteLine("Caixa Baixa: "+termoBusca.ToLower());
+
+
+            //testando Replace
+
+            termoBusca = termoBusca.Replace('r', 'R');
+            Console.WriteLine(termoBusca);
+
+            termoBusca = termoBusca.Replace('a', 'A');
+            Console.WriteLine(termoBusca);
+
+            Console.WriteLine(mensagemOrigem.IndexOf(termoBusca));
+
+            Console.ReadLine();
+
+
+         
+
+            string testeRemocao = "primeiraParte&parteParaRemover";
+            int indiceEcomercial = testeRemocao.IndexOf('&');
+            Console.WriteLine(testeRemocao.Remove(indiceEcomercial,4));
+
+            Console.ReadLine();
+
+
+            string palavra = "moedaOrigem=moedaDestino&moedaDestino=dolar";
+            string nomeArgumento = "moedaDestino=";
 
             int indice = palavra.IndexOf(nomeArgumento);
             Console.WriteLine("indice: "+indice);
@@ -31,7 +78,7 @@ namespace ByteBank.SistemaAgencia
 
             Console.WriteLine("Palavra: " + palavra);
             Console.WriteLine("substring: " + palavra.Substring(indice));
-            Console.WriteLine("palavrafinal " + palavra.Substring(indice+nomeArgumento.Length+1));
+            Console.WriteLine("palavrafinal " + palavra.Substring(indice+nomeArgumento.Length));
 
             Console.WriteLine("Tamanho da string "+ nomeArgumento.Length );
 
