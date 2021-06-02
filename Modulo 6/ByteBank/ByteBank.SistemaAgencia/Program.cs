@@ -22,10 +22,13 @@ namespace ByteBank.SistemaAgencia
             //[0123456789][0123456789][0123456789][0123456789] [-]
             //[0123456789][0123456789][0123456789][0123456789]
 
-            // string padrao ="[0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]";
-            // string padrao ="[0-9][0-9][0-9][0-9][-][0-9][0-9][0-9][0-9]";
-            string padrao = "[0-9]{4}[-][0-9]{4}";
-            string textoDeTeste = "Meu nome é cleyciane, me ligue em 1234-1234";
+            //string padrao ="[0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]";
+            //string padrao ="[0-9][0-9][0-9][0-9][-][0-9][0-9][0-9][0-9]";
+            //string padrao = "[0-9]{4,5}[-][0-9]{4}"; passando pelo método de quantificador
+            //string padrao = "[0-9]{4,5}[-]{0,1}[0-9]{4}";
+            //string padrao = "[0-9]{4,5}-{0,1}[0-9]{4}";
+            string padrao = "[0-9]{4,5}-[0-9]{4}";//? quantificador de 0 ate 1
+            string textoDeTeste = "Meu nome é cleyciane, me ligue em 98134-1234";
             //match define as propriedades padrões de um determinado texto
             Match resultado = Regex.Match(textoDeTeste, padrao);
 
