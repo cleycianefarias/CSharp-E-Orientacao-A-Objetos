@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ByteBank.Modelos;
 using ByteBank.Modelos.Funcionarios;
@@ -12,6 +13,37 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            // Me ligue em 7894 - 4654
+
+            //Meu número de telefone é 7894 - 4654
+
+            //O número 7894 - 4654 é para contato profissional
+
+            //[0123456789][0123456789][0123456789][0123456789] [-]
+            //[0123456789][0123456789][0123456789][0123456789]
+
+            // string padrao ="[0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]";
+            // string padrao ="[0-9][0-9][0-9][0-9][-][0-9][0-9][0-9][0-9]";
+            string padrao = "[0-9]{4}[-][0-9]{4}";
+            string textoDeTeste = "Meu nome é cleyciane, me ligue em 1234-1234";
+            //match define as propriedades padrões de um determinado texto
+            Match resultado = Regex.Match(textoDeTeste, padrao);
+
+            Console.WriteLine(resultado.Value);
+
+
+            Console.ReadLine();
+
+            string urlTeste = "https://www.bytebank.com/cambio";
+            int indiceByteBank = urlTeste.IndexOf("https://www.bytebank.com/cambio");
+
+            Console.WriteLine(urlTeste.StartsWith("https://www.bytebank.com/"));
+            Console.WriteLine(urlTeste.EndsWith("cambio/"));
+
+            Console.WriteLine(urlTeste.Contains("bytebank"));
+
+            Console.ReadLine();
+
             // pagina?argumentos
             // 012345678
 
@@ -41,8 +73,8 @@ namespace ByteBank.SistemaAgencia
             string termoBusca = "ra";
 
 
-            Console.WriteLine("Caixa Alta: "+termoBusca.ToUpper());
-            Console.WriteLine("Caixa Baixa: "+termoBusca.ToLower());
+            Console.WriteLine("Caixa Alta: " + termoBusca.ToUpper());
+            Console.WriteLine("Caixa Baixa: " + termoBusca.ToLower());
 
 
             //testando Replace
@@ -58,11 +90,11 @@ namespace ByteBank.SistemaAgencia
             Console.ReadLine();
 
 
-         
+
 
             string testeRemocao = "primeiraParte&parteParaRemover";
             int indiceEcomercial = testeRemocao.IndexOf('&');
-            Console.WriteLine(testeRemocao.Remove(indiceEcomercial,4));
+            Console.WriteLine(testeRemocao.Remove(indiceEcomercial, 4));
 
             Console.ReadLine();
 
@@ -71,19 +103,19 @@ namespace ByteBank.SistemaAgencia
             string nomeArgumento = "moedaDestino=";
 
             int indice = palavra.IndexOf(nomeArgumento);
-            Console.WriteLine("indice: "+indice);
-            Console.WriteLine("Nome do argumento: "+nomeArgumento.Length);
+            Console.WriteLine("indice: " + indice);
+            Console.WriteLine("Nome do argumento: " + nomeArgumento.Length);
 
             Console.WriteLine("Tamanho da string nomeArgumento: " + nomeArgumento.Length);
 
             Console.WriteLine("Palavra: " + palavra);
             Console.WriteLine("substring: " + palavra.Substring(indice));
-            Console.WriteLine("palavrafinal " + palavra.Substring(indice+nomeArgumento.Length));
+            Console.WriteLine("palavrafinal " + palavra.Substring(indice + nomeArgumento.Length));
 
-            Console.WriteLine("Tamanho da string "+ nomeArgumento.Length );
+            Console.WriteLine("Tamanho da string " + nomeArgumento.Length);
 
-            
-          
+
+
 
             Console.ReadLine();
 
@@ -98,7 +130,7 @@ namespace ByteBank.SistemaAgencia
             ExtratorValorDeArgumentosURL extrator = new ExtratorValorDeArgumentosURL(null);
 
             string url = "pagina?modedaOrigem=real&moedaDestino=dolar";
-            
+
 
             //url += "sufixo";
 
@@ -107,10 +139,10 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine(indiceInterrogacao);
 
             Console.WriteLine(url);
-            string argumentos = url.Substring(indiceInterrogacao+1);
+            string argumentos = url.Substring(indiceInterrogacao + 1);
             Console.WriteLine(argumentos);
 
-            
+
 
             Console.ReadLine();
 
