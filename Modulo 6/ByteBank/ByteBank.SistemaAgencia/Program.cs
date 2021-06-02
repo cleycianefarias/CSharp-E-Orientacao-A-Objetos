@@ -13,6 +13,31 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("olá mundo!");
+            Console.WriteLine(123);
+            Console.WriteLine(10.5);
+            Console.WriteLine(true);
+            //olá mundo! é uma string
+            //WriteLine é um método público estático
+            //console é uma classe pública
+
+            object conta = new ContaCorrente(456, 687876);
+            object desenvolvedor = new Desenvolvedor("456789");
+
+            string contaToString = conta.ToString();
+
+
+            //Console.WriteLine("Resultado " + contaToString);
+            Console.WriteLine(conta);
+            Console.WriteLine(desenvolvedor);
+            //sobrecarga contabase
+
+            Console.ReadLine();
+        }
+
+        static void TestaString()
+        {
+
             // Me ligue em 7894 - 4654
 
             //Meu número de telefone é 7894 - 4654
@@ -53,9 +78,6 @@ namespace ByteBank.SistemaAgencia
             string textoVazio = "";
             string textoNulo = null;
             string textoQualquer = "smkmkdfbnkjsbfhfs";
-
-
-
 
             string urlParametros = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
             ExtratorValorDeArgumentosURL extratorDeValores = new ExtratorValorDeArgumentosURL(urlParametros);
