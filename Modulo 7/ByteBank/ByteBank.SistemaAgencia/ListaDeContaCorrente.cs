@@ -40,10 +40,17 @@ namespace ByteBank.SistemaAgencia
             {
                 return;
             }
+
+
+            int novoTamanho = _itens.Length * 2;
+            if (novoTamanho < tamanhoNecessario)
+            {
+                novoTamanho = tamanhoNecessario;
+            }
             Console.WriteLine("Aumentando a capacidade da lista");
 
             //criando um novo array como tamanho necessario para aumentar a string
-            ContaCorrente[] novoArray = new ContaCorrente[tamanhoNecessario];
+            ContaCorrente[] novoArray = new ContaCorrente[novoTamanho];
             //passando os resultados do array antigo para o array novo
 
             for (int indice = 0; indice < _itens.Length; indice++)
