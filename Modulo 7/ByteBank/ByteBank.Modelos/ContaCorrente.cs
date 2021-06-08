@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
 using System.Threading.Tasks;
 
 namespace ByteBank.Modelos
@@ -110,6 +111,19 @@ namespace ByteBank.Modelos
             }
 
             contaDestino.Depositar(valor);
+        }
+
+        public override bool Equals(object obj)
+        {
+            ContaCorrente outraConta = obj as ContaCorrente;
+
+            if(outraConta == null)
+            {
+                return false;
+            }
+
+            return Numero == outraConta.Numero && Agencia == outraConta.Agencia;
+           
         }
 
         public override string ToString()
