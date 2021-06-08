@@ -13,35 +13,53 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            ContaCorrente[] contas = new ContaCorrente[]
+            {
+                    new ContaCorrente(874, 5679787),
+                    new ContaCorrente(874, 4456668),
+                    new ContaCorrente(874, 7781438)
+            };
 
+
+            for (int indice = 0; indice < contas.Length; indice++)
+            {
+                ContaCorrente contaAtual = contas[indice];
+                Console.WriteLine($"Conta {indice} {contaAtual.Numero}");
+            }
+
+
+            Console.ReadLine();
+        }
+
+        static void TestaArrayInt()
+        {
             //palavra
             //0123456
 
             //ARRAY de inteiros com 5 posições!
             int[] idades = null;
-            idades = new int[5];
+            idades = new int[3];
 
-            idades[0]=15;
-            idades[1]=28;
-            idades[2]=35;
-            idades[3]=50;
-            idades[4]=28;
+            idades[0] = 15;
+            idades[1] = 28;
+            idades[2] = 35;
+            //idades[3]=50;
+            //idades[4]=28;
+            //idades[5]=60;
 
-            int indice = 4; 
-            int idadeNoIndice4 = idades[indice];
+            Console.WriteLine(idades.Length);
 
-            int[] outroArray = idades;
-            Console.WriteLine(outroArray[3]);
+            int acumulador = 0;
+            for (int indice = 0; indice < idades.Length; indice++)
+            {
+                int idade = idades[indice];
+                Console.WriteLine($"Acessando o array idades no índice {indice}");
+                Console.WriteLine($"Valor de idades [{indice}] = {idade}");
+                acumulador += idade;
+            }
 
-            Console.WriteLine(idadeNoIndice4);
-
-            bool[] arrayDeBooleanos = new bool[10];
-
-            arrayDeBooleanos[0] = true;
-            arrayDeBooleanos[1] = false;
-            arrayDeBooleanos[2] = false;
-
-          
+            int media = acumulador / idades.Length;
+            Console.WriteLine($"Média das idades = {media}");
 
             Console.ReadLine();
         }
