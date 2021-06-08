@@ -15,13 +15,17 @@ namespace ByteBank.SistemaAgencia
         private int _proximaPosicao;
         int x=0;
 
-        public ListaDeContaCorrente()
+
+        public ListaDeContaCorrente(int capacidadeIncial = 5)
         {
-            _itens = new ContaCorrente[5];
+            _itens = new ContaCorrente[capacidadeIncial];
             _proximaPosicao = 0;
         }
 
-        
+        public void MeuMetodo(string texto = "texto padrão", int numero = 5 )
+        {
+
+        }
 
         public void Adicionar(ContaCorrente item)
         {
