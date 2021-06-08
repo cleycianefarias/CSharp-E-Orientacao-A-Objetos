@@ -11,3 +11,10 @@ C:\Users\faria\Documents\Alura Cursos\Modulo 6\ByteBank\ByteBank.Modelos\obj\Deb
 C:\Users\faria\Documents\Alura Cursos\Modulo 6\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.dll
 C:\Users\faria\Documents\Alura Cursos\Modulo 6\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.pdb
 C:\Users\faria\Documents\Alura Cursos\Modulo 6\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csproj.AssemblyReference.cache
+C:\Users\faria\Documents\Alura Cursos\Modulo 7\ByteBank\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.xml
+C:\Users\faria\Documents\Alura Cursos\Modulo 7\ByteBank\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.dll
+C:\Users\faria\Documents\Alura Cursos\Modulo 7\ByteBank\ByteBank.Modelos\bin\Debug\ByteBank.Modelos.pdb
+C:\Users\faria\Documents\Alura Cursos\Modulo 7\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csproj.AssemblyReference.cache
+C:\Users\faria\Documents\Alura Cursos\Modulo 7\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.csproj.CoreCompileInputs.cache
+C:\Users\faria\Documents\Alura Cursos\Modulo 7\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.dll
+C:\Users\faria\Documents\Alura Cursos\Modulo 7\ByteBank\ByteBank.Modelos\obj\Debug\ByteBank.Modelos.pdb

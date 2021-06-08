@@ -18,7 +18,8 @@ namespace ByteBank.SistemaAgencia
             //0123456
 
             //ARRAY de inteiros com 5 posições!
-            int[] idades = new int[5];
+            int[] idades = null;
+            idades = new int[5];
 
             idades[0]=15;
             idades[1]=28;
@@ -26,7 +27,19 @@ namespace ByteBank.SistemaAgencia
             idades[3]=50;
             idades[4]=28;
 
-            Console.WriteLine(idades[4]);
+            int indice = 4; 
+            int idadeNoIndice4 = idades[indice];
+
+            int[] outroArray = idades;
+            Console.WriteLine(outroArray[3]);
+
+            Console.WriteLine(idadeNoIndice4);
+
+            bool[] arrayDeBooleanos = new bool[10];
+
+            arrayDeBooleanos[0] = true;
+            arrayDeBooleanos[1] = false;
+            arrayDeBooleanos[2] = false;
 
           
 
