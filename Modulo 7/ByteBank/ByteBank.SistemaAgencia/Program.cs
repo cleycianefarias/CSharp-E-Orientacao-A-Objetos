@@ -13,18 +13,9 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            ListaDeObject listaDeIdades = new ListaDeObject();
-            listaDeIdades.Adicionar(10);
-            listaDeIdades.Adicionar(5);
-            listaDeIdades.Adicionar(4);
-            listaDeIdades.Adicionar("Um texto qualquer");
-            listaDeIdades.AdicionarVarios(16,23,60);
-
-            for (int i = 0; i < listaDeIdades.Tamanho; i++)
-            {
-                int idade = (int)listaDeIdades[i];
-                Console.WriteLine($"Idade no indice {i}: {idade}");
-            }
+            Lista<int> idades = new Lista<int>();
+            idades.Adicionar(5);
+            idades.AdicionarVarios(5,6,7,78);
 
 
 
@@ -33,12 +24,28 @@ namespace ByteBank.SistemaAgencia
             
             Console.ReadLine();
         }
+
+        static void TestaListaDeObject()
+        {
+            ListaDeObject listaDeIdades = new ListaDeObject();
+            listaDeIdades.Adicionar(10);
+            listaDeIdades.Adicionar(5);
+            listaDeIdades.Adicionar(4);
+            listaDeIdades.Adicionar("Um texto qualquer");
+            listaDeIdades.AdicionarVarios(16, 23, 60);
+
+            for (int i = 0; i < listaDeIdades.Tamanho; i++)
+            {
+                int idade = (int)listaDeIdades[i];
+                Console.WriteLine($"Idade no indice {i}: {idade}");
+            }
+        }
         static void TestaListaDeContaCorrente()
         {
             ListaDeContaCorrente lista = new ListaDeContaCorrente();
 
-           // lista.MeuMetodo(numero: 10);
-           // lista.MeuMetodo("texto padrão", 10);
+            lista.MeuMetodo(numero: 10);
+            lista.MeuMetodo("texto padrão", 10);
 
             ContaCorrente contaDoGui = new ContaCorrente(111, 1111111111);
 
@@ -50,23 +57,23 @@ namespace ByteBank.SistemaAgencia
                 new ContaCorrente(874, 5679754)
             };
 
-            //lista.AdicionarVarios(contas);
+            lista.AdicionarVarios(contas);
 
-            //lista.AdicionarVarios(
-                //contaDoGui,
-                //new ContaCorrente(874, 5679754),
-                //new ContaCorrente(875, 5679755),
-                //new ContaCorrente(873, 5679756)
-                //);
+            lista.AdicionarVarios(
+                contaDoGui,
+                new ContaCorrente(874, 5679754),
+                new ContaCorrente(875, 5679755),
+                new ContaCorrente(873, 5679756)
+                );
 
-            //for (int i = 0; i < lista.Tamanho; i++)
-            //{
-            //    ContaCorrente itemAtual = lista[i];
-            //    Console.WriteLine($"Item na posição {i} = Conta {itemAtual.Numero}/{itemAtual.Agencia}");
-            //}
+            for (int i = 0; i < lista.Tamanho; i++)
+            {
+                ContaCorrente itemAtual = lista[i];
+                Console.WriteLine($"Item na posição {i} = Conta {itemAtual.Numero}/{itemAtual.Agencia}");
+            }
 
-           // lista.Remover(contaDoGui);
-            // Console.WriteLine("Após remover o item");
+           lista.Remover(contaDoGui);
+           Console.WriteLine("Após remover o item");
 
 
         }
