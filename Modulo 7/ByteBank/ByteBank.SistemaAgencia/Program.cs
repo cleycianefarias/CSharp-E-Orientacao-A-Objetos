@@ -13,36 +13,73 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            ListaDeContaCorrente lista = new ListaDeContaCorrente();
+            ListaDeObject listaDeIdades = new ListaDeObject();
+            listaDeIdades.Adicionar(10);
+            listaDeIdades.Adicionar(5);
+            listaDeIdades.Adicionar(4);
+            listaDeIdades.Adicionar("Um texto qualquer");
+            listaDeIdades.AdicionarVarios(16,23,60);
 
-            lista.MeuMetodo(numero:10);
-            lista.MeuMetodo("texto padrão", 10);
-
-            ContaCorrente contaDoGui = new ContaCorrente(111, 1111111111);
-            lista.Adicionar(contaDoGui);
-
-            lista.Adicionar(new ContaCorrente(874, 5679787));
-            lista.Adicionar(new ContaCorrente(874, 5679754));
-            lista.Adicionar(new ContaCorrente(874, 5679745));
-            lista.Adicionar(new ContaCorrente(874, 5679746));
-            lista.Adicionar(new ContaCorrente(874, 5679747));
-            lista.Adicionar(new ContaCorrente(874, 56797458));
-            lista.Adicionar(new ContaCorrente(874, 56797459));
-            lista.Adicionar(new ContaCorrente(874, 567974560));
-            lista.Adicionar(new ContaCorrente(874, 567974561));
-
-            for (int i = 0; i < lista.Tamanho; i++)
+            for (int i = 0; i < listaDeIdades.Tamanho; i++)
             {
-                ContaCorrente itemAtual = lista[i];
-                Console.WriteLine($"Item na posição {i} = Conta {itemAtual.Numero}/{itemAtual.Agencia}");
+                int idade = (int)listaDeIdades[i];
+                Console.WriteLine($"Idade no indice {i}: {idade}");
             }
-            
-            lista.Remover(contaDoGui);
-           // Console.WriteLine("Após remover o item");
-           
 
+
+
+            Console.WriteLine(SomarVarios(1, 2, 3, 4, 5, 6));
+            Console.WriteLine(SomarVarios(1, 2, 45));
+            
             Console.ReadLine();
         }
+        static void TestaListaDeContaCorrente()
+        {
+            ListaDeContaCorrente lista = new ListaDeContaCorrente();
+
+           // lista.MeuMetodo(numero: 10);
+           // lista.MeuMetodo("texto padrão", 10);
+
+            ContaCorrente contaDoGui = new ContaCorrente(111, 1111111111);
+
+
+            ContaCorrente[] contas = new ContaCorrente[]
+            {
+                contaDoGui,
+                new ContaCorrente(874, 5679787),
+                new ContaCorrente(874, 5679754)
+            };
+
+            //lista.AdicionarVarios(contas);
+
+            //lista.AdicionarVarios(
+                //contaDoGui,
+                //new ContaCorrente(874, 5679754),
+                //new ContaCorrente(875, 5679755),
+                //new ContaCorrente(873, 5679756)
+                //);
+
+            //for (int i = 0; i < lista.Tamanho; i++)
+            //{
+            //    ContaCorrente itemAtual = lista[i];
+            //    Console.WriteLine($"Item na posição {i} = Conta {itemAtual.Numero}/{itemAtual.Agencia}");
+            //}
+
+           // lista.Remover(contaDoGui);
+            // Console.WriteLine("Após remover o item");
+
+
+        }
+        static int SomarVarios(params int[] numeros)
+        {
+            int acumulador = 0;
+            foreach (int numero in numeros)
+            {
+                acumulador += numero;
+            }
+            return acumulador;
+        }
+
 
         static void TestaArrayDeContaCorrente()
         {
