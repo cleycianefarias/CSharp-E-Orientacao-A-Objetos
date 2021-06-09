@@ -31,11 +31,15 @@ namespace ByteBank.SistemaAgencia
             lista.Adicionar(new ContaCorrente(874, 567974560));
             lista.Adicionar(new ContaCorrente(874, 567974561));
 
-
-            lista.EscreverListaNaTela();
+            for (int i = 0; i < lista.Tamanho; i++)
+            {
+                ContaCorrente itemAtual = lista[i];
+                Console.WriteLine($"Item na posição {i} = Conta {itemAtual.Numero}/{itemAtual.Agencia}");
+            }
+            
             lista.Remover(contaDoGui);
-            Console.WriteLine("Após remover o item");
-            lista.EscreverListaNaTela();
+           // Console.WriteLine("Após remover o item");
+           
 
             Console.ReadLine();
         }
