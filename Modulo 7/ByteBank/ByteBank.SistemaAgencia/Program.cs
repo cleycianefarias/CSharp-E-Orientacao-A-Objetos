@@ -17,6 +17,12 @@ namespace ByteBank.SistemaAgencia
             idades.Adicionar(5);
             idades.AdicionarVarios(5,6,7,78);
 
+            int idadeSoma = 0;
+
+            for (int i = 0; i < idades.Tamanho; i++)
+            {
+                int idadeAtual = idades[i];
+            }
 
 
             Console.WriteLine(SomarVarios(1, 2, 3, 4, 5, 6));
