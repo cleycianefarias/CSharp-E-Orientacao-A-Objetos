@@ -11,7 +11,7 @@ namespace ByteBank.SistemaAgencia
 {
     class Program
     {
-        //public class MinhaListaExtendida:List<int>
+    
         static void Main(string[] args)
         {
             List<int> idades = new List<int>();
@@ -26,8 +26,12 @@ namespace ByteBank.SistemaAgencia
             idades.Remove(5);
             int idadeSoma = 0;
 
-            idades.AddRange(new int[] { 1, 2, 3, 9 });
+            //idades.AddRange(new int[] { 1, 2, 3, 9 });
+            //ListExtensoes.AdicionarVarios(idades, 1, 2, 3, 4, 5, 50);
+
+            idades.AdicionarVarios(7, 8, 9, 30);
             ListExtensoes.AdicionarVarios(idades, 1, 2, 3, 4, 5, 50);
+
 
             for (int i = 0; i < idades.Count; i++)
             {
