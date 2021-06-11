@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 namespace ByteBank.SistemaAgencia.Extensoes
 {
-    public class ListExtensoes
+    public static class ListExtensoes
     {
         //lista genérica
-        public static void AdicionarVarios(this List<int> lista, params T[] itens)
+        public static void AdicionarVarios<T>(this List<T> lista, params T[] itens)
         {
             foreach (T item in itens)
             {
                 lista.Add(item);
             }
         }
-
+        public static void TesteGenerico<T2>(this string texto)
+        {
+            
+        }
         static void Teste()
         {
             List<int> idades = new List<int>();
@@ -24,16 +27,19 @@ namespace ByteBank.SistemaAgencia.Extensoes
             idades.Add(26);
             idades.Add(60);
 
-            ListExtensoes<int>.AdicionarVarios(idades, 2, 3, 4, 5);
+            idades.AdicionarVarios(54, 5465, 465);
+
+            string guilherme = "Guilherme";
+            guilherme.TesteGenerico<int>();
+
+            //ListExtensoes<int>.AdicionarVarios(idades, 2, 3, 4, 5);
 
 
             List<string> nomes = new List<string>();
             nomes.Add("Guilherme");
 
-            ListExtensoes<string>.AdicionarVarios(nomes, "Lucas", "mariana");
-
-
-
+            //ListExtensoes<string>.AdicionarVarios(nomes, "Lucas", "mariana");
+            //string é usado como método genperico da extensão
             nomes.AdicionarVarios("Lucas", "Mariana");
         }
     }
