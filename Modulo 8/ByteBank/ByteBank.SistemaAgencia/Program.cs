@@ -16,6 +16,18 @@ namespace ByteBank.SistemaAgencia
     
         static void Main(string[] args)
         {
+            //var idade=14;
+            //o compilador deve entender que tipo de variavel eta sendo atribuido
+            //após o var deve inicializar o tipo que essa variavel deve receber
+
+            var resultado = SomarVarios(1, 5, 6);
+
+            var conta = new ContaCorrente(344, 4564564);
+            var gerenciador = new GerenciadorBonificacao();
+            var gerenciadores = new List<GerenciadorBonificacao>();
+
+            conta.Depositar(344);
+
             List<int> idades = new List<int>();
 
             idades.Add(5);
