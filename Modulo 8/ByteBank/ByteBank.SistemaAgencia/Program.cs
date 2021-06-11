@@ -16,19 +16,46 @@ namespace ByteBank.SistemaAgencia
     
         static void Main(string[] args)
         {
-            //var idade=14;
-            //o compilador deve entender que tipo de variavel eta sendo atribuido
-            //após o var deve inicializar o tipo que essa variavel deve receber
+            var contas = new List<ContaCorrente>()
+            {
+                new ContaCorrente(459,56789),
+                new ContaCorrente(421,45612),
+                new ContaCorrente(340,1),
+                new ContaCorrente(340,99999),
+                new ContaCorrente(458,56781),
+                new ContaCorrente(290,12345)
+            };
 
-            var resultado = SomarVarios(1, 5, 6);
+            contas.Sort();
+           
 
-            var conta = new ContaCorrente(344, 4564564);
-            var gerenciador = new GerenciadorBonificacao();
-            var gerenciadores = new List<GerenciadorBonificacao>();
+            foreach (var conta in contas)
+            {
+                Console.WriteLine($"Conta numero {conta.Numero}, agencia {conta.Agencia}");
+            }
 
-            conta.Depositar(344);
+            Console.ReadLine();
+        }
 
-            List<int> idades = new List<int>();
+        static void TestaSort()
+        {
+
+            var nomes = new List<string>()
+            {
+                "Guilherme",
+                "Luana",
+                "Weligton",
+                "Ana"
+            };
+
+            nomes.Sort();
+
+            foreach (var nome in nomes)
+            {
+                Console.WriteLine(nome);
+            }
+
+            var idades = new List<int>();
 
             idades.Add(5);
             idades.Add(6);
@@ -37,7 +64,11 @@ namespace ByteBank.SistemaAgencia
             idades.Add(9);
 
             idades.AdicionarVarios(45, 80, 12);
-      
+
+            //ordenar a idade do menor para o maior
+
+            idades.AdicionarVarios(99, -1);
+            idades.Sort();
 
             for (int i = 0; i < idades.Count; i++)
             {
@@ -48,8 +79,6 @@ namespace ByteBank.SistemaAgencia
 
             //Console.WriteLine(SomarVarios(1, 2, 3, 4, 5, 6));
             //Console.WriteLine(SomarVarios(1, 2, 45));
-            
-            Console.ReadLine();
         }
 
         static void TestaListaDeObject()
