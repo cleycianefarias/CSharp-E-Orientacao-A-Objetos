@@ -4,3 +4,4 @@ C:\Users\faria\Documents\Alura Cursos\Modulo 9\ByteBankImportacaoExportacao\bin\
 C:\Users\faria\Documents\Alura Cursos\Modulo 9\ByteBankImportacaoExportacao\obj\Debug\ByteBankImportacaoExportacao.csproj.CoreCompileInputs.cache
 C:\Users\faria\Documents\Alura Cursos\Modulo 9\ByteBankImportacaoExportacao\obj\Debug\ByteBankImportacaoExportacao.exe
 C:\Users\faria\Documents\Alura Cursos\Modulo 9\ByteBankImportacaoExportacao\obj\Debug\ByteBankImportacaoExportacao.pdb
+C:\Users\faria\Documents\Alura Cursos\Modulo 9\ByteBankImportacaoExportacao\obj\Debug\ByteBankImportacaoExportacao.csproj.AssemblyReference.cache
