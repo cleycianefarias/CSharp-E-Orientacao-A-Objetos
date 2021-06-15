@@ -13,7 +13,6 @@ namespace ByteBankImportacaoExportacao
         static void Main(string[] args) 
         {
             var enderecoDoArquivo = "contas.txt";
-
             using (var fluxoDeArquivo = new FileStream(enderecoDoArquivo, FileMode.Open))
             using (var leitor = new StreamReader(fluxoDeArquivo))
             {
@@ -23,14 +22,13 @@ namespace ByteBankImportacaoExportacao
                     Console.WriteLine(linha);
                 }
             }
-               
-            
+
             Console.ReadLine();
+
         }
 
 
 
-       
     }
 } 
  
