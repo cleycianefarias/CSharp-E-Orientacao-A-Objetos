@@ -1,6 +1,6 @@
 # CSharp-E-Orientacao-A-Objetos
 
-<p style='text-align: justify;'> 
+<div style="text-align: right"> your-text-here
 Este curso de formação é dividido em nove módulos e tem como principal objetivo aprender desde os fundamentos da linguagem C# até como fazer uma modelagem orientada a objetos.
 
 Módulo 1 - são abordadas variáveis numéricas, variáveis de texto, controle de fluxo com IF e controles de fluxo com laços de repetição.
@@ -21,5 +21,4 @@ Módulo 8 - neste módulo são abordados os tipos genéricos List e seus método
 
 Módulo 9 - neste módulo são abordados a criação de leitura e escrita de arquivos com C#, a compreensão de encoding, UTF8, Unicode, ASCII e outros, o uso de buffers para lidar com fluxo de dados, criação de arquivos binários e por fim são abordados a classe File.
   
-</p>
-
+ </div>
